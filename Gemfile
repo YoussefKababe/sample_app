@@ -30,11 +30,24 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'capybara'
+  gem 'guard-rspec'
   gem 'pry-rails'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
+end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 group :production do
