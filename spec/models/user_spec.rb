@@ -28,7 +28,7 @@ describe User do
     it { should_not be_valid }
   end
 
-  describe "when email format in invalid" do
+  describe "when email format is invalid" do
     it "should be invalid" do
       addresses = %w[user@foo,com uset_at_foo.org example.user@foo. foo@bar_baz.com foo@bar+bar.com]
       addresses.each do |invalid_address|
