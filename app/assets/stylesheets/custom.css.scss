@@ -2,6 +2,12 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -77,5 +83,59 @@ footer {
       float: left;
       margin-left: 10px;
     }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $gray-light;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    margin: 0 0 18px 0;
   }
 }
